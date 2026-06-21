@@ -2,4 +2,30 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 70px;
+  padding: 20px 0px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #202024;
+}
+
+input {
+  background: #eeeeee;
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+input::placeholder {
+  color: #3d3d3d;
+  font-family: sans-serif;
 }
