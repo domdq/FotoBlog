@@ -14,3 +14,24 @@ h1 {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 22px;
 }
+
+.CardFotos {
+  background: #fff;
+  border-radius: 8px;
+}
+.CardFotos img {
+  border-radius: 8px 8px 0 0;
+}
+
+.CardFotos span {
+  background: #f5f5f5;
+  padding: 8px;
+  border-radius: 8px;
+}
+.CardFotos div {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: 0px 0px 16px 16px;
+}

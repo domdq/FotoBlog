@@ -9,7 +9,17 @@ import foto7 from "../../assets/fotos7.png";
 import foto8 from "../../assets/fotos8.png";
 import foto9 from "../../assets/fotos9.png";
 
-const fotos = [foto1, foto2, foto3, foto4, foto5, foto6, foto7, foto8, foto9];
+const fotos = [
+  { foto: foto1, titulo: "Multi-Screen", tag: "TAG" },
+  { foto: foto2, titulo: "Colmeia", tag: "TAG" },
+  { foto: foto3, titulo: "Deep purple", tag: "TAG" },
+  { foto: foto4, titulo: "Setup de escritor", tag: "TAG" },
+  { foto: foto5, titulo: "Ergonomia e cores", tag: "TAG" },
+  { foto: foto6, titulo: "Organização e grids", tag: "TAG" },
+  { foto: foto7, titulo: "Show de luzes", tag: "TAG" },
+  { foto: foto8, titulo: "Workspace elétrica", tag: "TAG" },
+  { foto: foto9, titulo: "Dark and red", tag: "TAG" },
+];
 
 export default function Fotos() {
   return (
@@ -17,15 +27,23 @@ export default function Fotos() {
       <div className="container">
         <h1>Galeria</h1>
         <div className="section-fotos">
-          {fotos.map(function render(img) {
-            return <CardFotos valor={img} />;
-          })}
+          {fotos.map((item, index) => (
+            <CardFotos key={index} valor={item} />
+          ))}
         </div>
       </div>
     </section>
   );
 }
 
-function CardFotos(props) {
-  return <img src={props.valor} id="fotos" />;
+function CardFotos({ valor }) {
+  return (
+    <div className="CardFotos">
+      <img src={valor.foto} />
+      <div>
+        <h3>{valor.titulo}</h3>
+        <span>{valor.tag}</span>
+      </div>
+    </div>
+  );
 }
